@@ -1,18 +1,27 @@
-/*body{
-    font-size: 22px;
-}
-*/
-
-/*:root{
-    font-size: 18px;
-}*/
 *{
     margin: 0;
     padding: 0;
+    margin-right: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: linear-gradient(100deg, #fadc84 50%, #f4e88f 50%);
+    /* background-image: linear-gradient(100deg, #fadc84 50%, #f4e88f 50%); */
     box-sizing: content-box;
+} 
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #fff;
+    color: var(--wd-text-color);
+    text-rendering: optimizeLegibility;
+    font-weight: var(--wd-text-font-weight);
+    font-style: var(--wd-text-font-style);
+    font-size: var(--wd-text-font-size);
+    font-family: var(--wd-text-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: var(--wd-text-line-height);
 }
+
 
 
 
