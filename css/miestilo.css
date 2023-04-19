@@ -48,3 +48,41 @@ h2{
     width: 50%;
     margin: 20px auto;
 }
+
+/* .container{
+    display: grid;
+    border: 3px solid orange;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:repeat(4,1fr);
+    gap: 5px; 
+  }
+  
+  .item{
+      border: 2px solid orange;
+      grid-column:1/-1;
+  
+  }
+  
+  .item1{
+    grid-column: 8/-1;
+      background-color: rgb(255, 200, 0);
+      grid-column:1/-1;
+  }
+  .item2{
+      grid-column: 1/8;
+      background-color: rgb(255, 200, 0);
+      grid-row: 2/4;
+  }
+     
+  .item3{
+      grid-column: 8/-1;
+      grid-row: 2/4;
+      background-color: rgb(255, 200, 0);
+  }
+  
+  .item4{
+      grid-column: 1/-1;
+      grid-row: 4/5;
+      background-color: aqua;
+  }
+   */
