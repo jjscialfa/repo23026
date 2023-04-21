@@ -1,18 +1,19 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     margin-right: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     /* background-image: linear-gradient(100deg, #fadc84 50%, #f4e88f 50%);  */
     box-sizing: border-box;
-
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(12, 12, 12);
     overflow-x: hidden;
     margin: 0;
-    background-color: #fff;
+    /*     background-color: #fff;
     color: var(--wd-text-color);
     text-rendering: optimizeLegibility;
     font-weight: var(--wd-text-font-weight);
@@ -21,13 +22,85 @@ body {
     font-family: var(--wd-text-font);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: var(--wd-text-line-height);
-} 
+    line-height: var(--wd-text-line-height); */
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: rgb(185, 156, 107);
+    margin: 0;
+    padding: 5px;
+}
+
+table {
+    border-collapse:separate ;
+    border-spacing: 10px 5px;
+    /* border: 1px solid; */
+  }
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+* Estilos del banner */ #banner {
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Estilos de los productos destacados */
+#destacados {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.producto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.producto img {
+    max-width: 100%;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
 
 
 
 
-h1 {
+
+/* h1 {
     border: 5px solid rgb(255, 162, 0);
     width: 100%;
     padding: 10px 15px 5px;
@@ -41,26 +114,18 @@ h2 {
 
     color: rgb(12, 12, 12);
     text-align: center;
-}
+} */
 
 .texto {
     margin: 0 auto;
-    width: 50%;
+    width: 100%;
 }
 
 .imagenes {
-    width: 50%;
+    width: 100%;
     margin: 20px auto;
 }
 
-/*  .container{
-    display: grid;
-    /* border: 3px solid orange;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows:repeat(4,1fr);
-    
-    gap: 5px;  
-   */
 .container {
     width: 100%;
     height: 100vh;
@@ -70,13 +135,33 @@ h2 {
     background-repeat: no-repeat;
 }
 
+.destacados {
+    margin:1%;
+    padding:1%;
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8)); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.productos {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .navbar {
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
-    justify-content:left;
+    justify-content: left;
 }
 
 .navbar ul li {
@@ -98,7 +183,7 @@ h2 {
     content: "";
     height: 3px;
     width: 0%;
-    background: rgb(205, 117, 50);
+    background:  rgb(185, 156, 107);
     position: absolute;
     left: 0;
     bottom: -12px;
@@ -109,38 +194,53 @@ h2 {
     width: 100%;
 }
 
-    /* animaciones*/
+/* animaciones*/
 
-    .logo{
+.logo {
     margin-top: 30px;
     margin-left: 20px;
     width: 150px;
     height: 150px;
     background: rgb(241, 239, 237);
     border-radius: 50%;
-    animation-name:cambiarColor ;
+    animation-name: cambiarColor;
     animation-duration: 3s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     /* animation-iteration-count: 2;
     animation-direction: reverse; */
+}
+
+@keyframes cambiarColor {
+    0% {
+        background-color: rgb(2, 2, 2);
+        transform: scale(2);
+        transform: translate(500px);
     }
-    @keyframes cambiarColor{
-        0%{
-            background-color: darkgreen;
-            transform: scale(2);
-            transform: translate(500px);
-        }
-        100%{
-           background: orange;
-           /* transform: scale(2); */
-        }
-    } 
-    
-    /* a:link {color: red;}
-    a:hover {background-color: yellow;}
-    a:visited {color: blue;}
-    a:active {background-color: green; color: white; */
-/*
+
+    100% {
+        background: rgb(102, 83, 48);
+        /* transform: scale(2); */
+    }
+}
+
+a:link {
+    color:  rgb(185, 156, 107);
+}
+
+a:hover {
+    background-color: rgb(26, 18, 6);
+}
+
+a:visited {
+    color: rgb(135, 113, 71);
+}
+
+a:active {
+    background-color: rgb(128, 117, 0);
+    color: white;
+}
+
+    /*
   .item{
       border: 2px solid orange;
       grid-column:1/-1;
@@ -168,5 +268,9 @@ h2 {
       grid-column: 1/-1;
       grid-row: 4/5;
       background-color: aqua;
-  }
-   */
+       } */
+
+.contenido {
+    align-items: center;
+    padding: 10px;
+}

@@ -6,86 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon/casita.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/miestilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>TusMuebles.com</title>
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
 </head>
-<div class="container">
-<body>
-
-    <div class="navbar">
-        <img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo" >
-
+<header>
+    <table>
+        <tr>
+            <td><img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo"></td>
+            <td colspan=2>
+                <h1>TusMuebles.com</h1>
+            </td>
+        </tr>
+    </table>
+    <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="producto.html">Catálogo de Productos</a></li>
             <li><a href="nosotros.html">Sobre nosotros</a></li>
             <li><a href="formulario.html">Contacto</a></li>
         </ul>
-    </div>
-    <div class="container">
-    <section>
-        <br>
-        <h2>Formulario de Contacto</h2>
-        <form action="" method="post" autocomplete="off">
-            <fieldset>
-                <legend>Datos Personales </legend>
-                <p>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre1" id="nombre" placeholder="ingrese su nombre" required>
-                </p>
-                <p>
-                    <label for="edad">Edad</label>
-                    <input type="number" name="anios" id="edad" min="0" max="10" placeholder="Ingrese su edad" required>
-                </p>
+    </nav>
+</header>
+<div class="container">
+    <body>
+        <div class="destacados">
+            <section>
+                <br>
+                <h2>Formulario de Contacto</h2>
+                <form action="" method="post" autocomplete="off">
+                    <fieldset>
+                        <legend>Datos Personales </legend>
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre1" id="nombre" placeholder="ingrese su nombre" required>
+                        </p>
+                        <p>
+                            <label for="edad">Edad</label>
+                            <input type="number" name="anios" id="edad" min="0" max="10" placeholder="Ingrese su edad"
+                                required>
+                        </p>
 
 
-            </fieldset>
+                    </fieldset>
 
-            <h4>Selecione una o mas de una opcion</h4>
+                    <h4>Selecione una o mas de una opcion</h4>
 
-            <p>
+                    <p>
 
-                <input type="checkbox" name="opcion1" value="si" checked>Si
-                <input type="checkbox" name="opcion2" value="no">No
-                <input type="checkbox" name="opcion3" value="tal vez">Tal vez
-            </p>
+                        <input type="checkbox" name="opcion1" value="si" checked>Si
+                        <input type="checkbox" name="opcion2" value="no">No
+                        <input type="checkbox" name="opcion3" value="tal vez">Tal vez
+                    </p>
 
-            <br>
-            <h4>Solo una opcion</h4>
+                    <br>
+                    <h4>Solo una opcion</h4>
 
-            <p>
+                    <p>
 
-                <input type="radio" name="opcion" value="si">Si
-                <input type="radio" name="opcion" value="no" checked>No
-                <input type="radio" name="opcion" value="tal vez">Tal vez
-            </p>
+                        <input type="radio" name="opcion" value="si">Si
+                        <input type="radio" name="opcion" value="no" checked>No
+                        <input type="radio" name="opcion" value="tal vez">Tal vez
+                    </p>
 
-            <br>
-
-
-            <p> Comentario
-                <textarea name="" id="" cols="30" rows="10">Ingrese su consulta</textarea>
-
-            </p>
-
-            <input type="submit" value="enviar">
+                    <br>
 
 
+                    <p> Comentario
+                        <textarea name="" id="" cols="30" rows="10">Ingrese su consulta</textarea>
+
+                    </p>
+
+                    <input type="submit" value="enviar">
 
 
 
-        </form>
 
 
-    </section>
+                </form>
+
+
+            </section>
+        </div>
+    </footer>
+
+    </body>
 </div>
-<footer>
-    <br>
-    <br>
-    <a href="mailto" target="_blank"><img src="img/inbox.png" alt="correo" width="100"
-            height="100"></a>
-    <p class="parrafo1">© 2023</p>
-</footer>
-</body>
-</div>
+
 </html>
