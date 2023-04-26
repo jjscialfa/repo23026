@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon/casita.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"/>
+
     <title>TusMuebles.com</title>
     <link rel="stylesheet" type="text/css" href="css/miestilo.css">
 </head>
@@ -15,7 +17,7 @@
         <tr>
             <td><img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo"></td>
             <td colspan=2>
-                <h1>TusMuebles.com</h1>
+                <h1 class="titulo">TusMuebles.com</h1>
             </td>
         </tr>
     </table>
@@ -28,66 +30,34 @@
         </ul>
     </nav>
 </header>
-<div class="container">
+<div class="container-fluid">
     <body>
         <div class="destacados">
-            <section>
-                <br>
-                <h2>Formulario de Contacto</h2>
-                <form action="" method="post" autocomplete="off">
-                    <fieldset>
-                        <legend>Datos Personales </legend>
-                        <p>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre1" id="nombre" placeholder="ingrese su nombre" required>
-                        </p>
-                        <p>
-                            <label for="edad">Edad</label>
-                            <input type="number" name="anios" id="edad" min="0" max="10" placeholder="Ingrese su edad"
-                                required>
-                        </p>
 
+            <h1 class="tituloFormulario">Formulario de contacto</h1>
 
-                    </fieldset>
-
-                    <h4>Selecione una o mas de una opcion</h4>
-
-                    <p>
-
-                        <input type="checkbox" name="opcion1" value="si" checked>Si
-                        <input type="checkbox" name="opcion2" value="no">No
-                        <input type="checkbox" name="opcion3" value="tal vez">Tal vez
-                    </p>
-
-                    <br>
-                    <h4>Solo una opcion</h4>
-
-                    <p>
-
-                        <input type="radio" name="opcion" value="si">Si
-                        <input type="radio" name="opcion" value="no" checked>No
-                        <input type="radio" name="opcion" value="tal vez">Tal vez
-                    </p>
-
-                    <br>
-
-
-                    <p> Comentario
-                        <textarea name="" id="" cols="30" rows="10">Ingrese su consulta</textarea>
-
-                    </p>
-
-                    <input type="submit" value="enviar">
-
-
-
-
-
-                </form>
-
-
-            </section>
+            <form>
+                <div class="mb-3">
+                    <label for="InputNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="InputNombre">
+                  </div>
+                <div class="mb-3">
+                  <label for="InputApellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="InputApellido">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripción</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+          
+                <button type="submit" class="btn btn-secondary">Enviar</button>
+              </form>
         </div>
+        
     </body>
 </div>
     <footer>
@@ -98,5 +68,6 @@
         <p class="parrafo1"><b>TusMuebles.com</b> ©2023</p>
     </footer>
 
+    <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
 
 </html>

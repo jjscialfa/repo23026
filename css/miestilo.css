@@ -50,6 +50,14 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: large;
+    /*flexbox para alinear items de nav*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+
 }
 
 nav li {
@@ -100,7 +108,10 @@ nav a {
     padding: 10px 20px;
 }
 
-
+/*formulario*/
+.tituloFormulario{
+    text-align: center;
+}
 
 
 
@@ -166,6 +177,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: left;
+    
 }
 
 .navbar ul li {
@@ -199,7 +211,12 @@ h2 {
 }
 
 /* animaciones*/
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+.titulo {
+    -webkit-animation:tracking-in-expand 1s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand 1s cubic-bezier(.215,.61,.355,1.000) both
+}
 
+@-webkit-keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}
 .logo {
     margin-top: 30px;
     margin-left: 20px;
@@ -207,11 +224,13 @@ h2 {
     height: 150px;
     background: rgb(241, 239, 237);
     border-radius: 50%;
-    animation-name: cambiarColor;
+    /* animation-name: cambiarColor;
     animation-duration: 3s;
-    animation-delay: 1s;
+    animation-delay: 1s; */
     /* animation-iteration-count: 2;
     animation-direction: reverse; */
+    -webkit-animation: rotate-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes cambiarColor {
