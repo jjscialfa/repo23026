@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <table>
             <tr>
                 <td><img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo"></td>
@@ -22,7 +22,7 @@
                 </td>
             </tr>
         </table>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="producto.html">Catálogo</a></li>
@@ -39,28 +39,34 @@
 
             <h2 class="tituloFormulario">Formulario de contacto</h2>
 
-            <form>
+            <form id="form">
                 <div class="mb-3">
-                    <label for="InputNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="InputNombre">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="mb-3">
-                    <label for="InputApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="InputApellido">
+                    <label for="surname" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="surname" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <div class="invalid-feedback">
+                        Por favor ingrese un correo electrónico válido.
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descripción</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="message">Descripción</label>
+                    <textarea class="form-control"  name="message" id="message" rows="5" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-secondary">Enviar</button>
+                <!--  <button id="button" type="submit" class="btn btn-secondary">Enviar</button>-->
+                <!-- <button id="btn" class="btn btn-secondary" type="submit" value="Enviar">Enviar</button> -->
+                <input type="submit" id="button" value="Enviar" >
+
+
             </form>
-
-
 
         </div>
 
@@ -75,5 +81,43 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+<script type="text/javascript">
+    emailjs.init('nMuMhSAL0X3k4caW_')
+</script>
+
+
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+
+            const serviceID = 'default_service';
+            const templateID = 'template_ewwy09t';
+
+
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviado';
+                    alert('El mensaje se envio correctamente! gracias por comunicarse con nosotros');
+                }, (err) => {
+                    btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                });
+
+
+
+        });
+</script>
+
+
 
 </html>

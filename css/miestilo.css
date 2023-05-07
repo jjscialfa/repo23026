@@ -121,6 +121,10 @@ h2 {
 .header {
     grid-area: header;
 }
+.header {
+    background: linear-gradient(rgba(90, 72, 40, 0.8), rgba(36, 37, 36, 0.8));
+    padding: 20px;
+}
 
 .left {
     grid-area: left;
@@ -401,3 +405,16 @@ a:active {
     max-width: 100%;
     height: auto;
 }
+/************************/
+
+.menu a:hover {
+    background-color: rgba(249, 249, 249, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+  } 
+  .menu a {
+    text-decoration: none;
+    color: rgb(185, 156, 107);
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.2s ease-out;
+}  
