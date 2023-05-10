@@ -3,20 +3,25 @@
     margin: 0;
     padding: 0;
     margin-right: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-image: linear-gradient(100deg, #fadc84 50%, #f4e88f 50%);  */
-    box-sizing: border-box;
-    /*width: 1280px;*/
-    max-width: 100%;
-}   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(215, 170, 91, 0.8), rgba(245, 250, 245, 0.8));
+}
+
+home img {
+    width: 50%;
+}
 
 /* Estilos del encabezado */
-header {
-    background-color: #333;
-    color: rgb(185, 156, 107);
-    margin: 0;
-    padding: 5px;
-    max-width: 100%;
+.encabezado {
+    background-image: url("/img/fondo-madera.jpg");
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-position: center;
+    /* Centra la imagen dentro del contenedor */
+    /* Otros estilos para el encabezado */
 }
 
 table {
@@ -24,20 +29,22 @@ table {
     border-spacing: 10px 5px;
     /* border: 1px solid; */
 }
-nav{
+
+nav {
     width: 100%;
 }
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size:medium;
+    font-size: large;
     /*flexbox para alinear items de nav*/
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: auto;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     max-width: 100%;
 }
@@ -48,7 +55,7 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: #faf9f5d7;
     text-decoration: none;
 }
 
@@ -61,15 +68,6 @@ nav a {
     text-align: center;
 }
 
-/* Estilos de los productos destacados */
-/* #destacados {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-}
- */
 .producto {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -96,24 +94,6 @@ nav a {
     text-align: center;
 }
 
-
-
-/* h1 {
-    border: 5px solid rgb(255, 162, 0);
-    width: 100%;
-    padding: 10px 15px 5px;
-    margin: 5px;
-
-    color: rgb(255, 180, 0);
-    text-align: center;
-}
-
-h2 {
-
-    color: rgb(12, 12, 12);
-    text-align: center;
-} */
-
 .texto {
     margin: 0 auto;
     width: 100%;
@@ -124,16 +104,6 @@ h2 {
     margin: 20px auto;
 }
 
-.header {
-    grid-area: header;  
-    max-width: 100%;
-    max-height: 25%;
-}
-
-.header {
-    background: linear-gradient(rgba(90, 72, 40, 0.8), rgba(36, 37, 36, 0.8));
-    padding: 20px;
-}
 
 .left {
     grid-area: left;
@@ -149,15 +119,14 @@ h2 {
     /*max-width: 70%;*/
 }
 
-.footer {
-    grid-area: footer;
-    max-width: 100%;
-    max-height: 25%;
+footer {
+    background-image: url("/img/fondo-madera.jpg");
+    color: #faf9f5d7;
+    text-align: right;
 }
 
-.item {
-    /*background-color: white; linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));*/
 
+.item {
     padding: 10px;
     color: rgb(16, 16, 16);
     border-radius: 10px;
@@ -165,24 +134,25 @@ h2 {
 
 .container {
     display: grid;
-    /* grid-template: filas / columnas */
+
     grid-template: 10px 1fr / 1fr 1fr 5px;
-    grid-template-areas: "header header"
+    grid-template-areas: "header "
         "left contenido"
-        "footer footer";
+        "footer ";
     grid-gap: 20px;
     height: 100vh;
 
     max-width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));
+    background-image: linear-gradient(rgba(215, 170, 91, 0.8), rgba(245, 250, 245, 0.8));
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .container-fluid {
-    background-image: linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));
+    background-image: linear-gradient(rgba(215, 170, 91, 0.8), rgba(245, 250, 245, 0.8));
 }
 
 .destacados {
@@ -198,9 +168,10 @@ h2 {
         padding: 10px;
     }
 }
+
 /* BREACK POINTS */
 /* Extra small devices (600px and down) */
-@media only screen and (max-width: 412px) and (max-height: 914px){
+@media only screen and (max-width: 412px) and (max-height: 914px) {
     .example {
         /*background: red;*/
         max-width: 100%;
@@ -223,17 +194,22 @@ h2 {
 
 /* Large devices (992px and up) */
 @media only screen and (min-width: 992px) {
-    .example {background: orange;}
+    .example {
+        background: orange;
     }
-    /* Extra large devices (1200px and up) */
-    @media only screen and (min-width: 1200px) {
-    .example {background: pink;}
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1280px) {
+    .example {
+        background: pink;
     }
+}
+
 .productos {
     width: 100%;
     height: 100vh;
-    /*background-image: white; linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));*/
-    background-size: cover;
+     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -259,7 +235,6 @@ h2 {
 .navbar ul li a {
     text-decoration: none;
     color: rgb(15, 14, 14);
-    /*     font-family: Roboto, "sans-serif"; */
     font-size: 1.2rem;
 }
 
@@ -311,7 +286,10 @@ h2 {
 
 .titulo {
     -webkit-animation: tracking-in-expand 1s cubic-bezier(.215, .61, .355, 1.000) both;
-    animation: tracking-in-expand 1s cubic-bezier(.215, .61, .355, 1.000) both
+    animation: tracking-in-expand 1s cubic-bezier(.215, .61, .355, 1.000) both;
+    font-size: xx-large;
+    font-style: bold;
+    color: #faf9f5d7;
 }
 
 @-webkit-keyframes rotate-in-center {
@@ -388,44 +366,11 @@ a:active {
     color: white;
 }
 
-/*
-  .item{
-      border: 2px solid orange;
-      grid-column:1/-1;
-  
-  }
-  
-  .item1{
-    grid-column: 8/-1;
-      background-color: rgb(255, 200, 0);
-      grid-column:1/-1;
-  }
-  .item2{
-      grid-column: 1/8;
-      background-color: rgb(255, 200, 0);
-      grid-row: 2/4;
-  }
-     
-  .item3{
-      grid-column: 8/-1;
-      grid-row: 2/4;
-      background-color: rgb(255, 200, 0);
-  }
-  
-  .item4{
-      grid-column: 1/-1;
-      grid-row: 4/5;
-      background-color: aqua;
-       } */
-
-
 .contenido {
     padding: 1%;
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    /* background: white; linear-gradient(rgba(90, 72, 40, 0.8), rgba(245, 250, 245, 0.8));*/
-    /* font-family: 'Ropa Sans', sans-serif;*/
 }
 
 .video-container {
@@ -450,9 +395,10 @@ a:active {
 }
 
 /************************/
-.menu{
+.menu {
     max-width: 100%;
 }
+
 .menu a:hover {
     background-color: rgba(249, 249, 249, 0.2);
     border-radius: 5px;
@@ -461,7 +407,7 @@ a:active {
 
 .menu a {
     text-decoration: none;
-    color: rgb(185, 156, 107);
-    font-family: 'Montserrat', sans-serif;
+    color: rgb(232, 228, 221);
+    /*font-family: 'Montserrat', sans-serif;*/
     transition: background-color 0.2s ease-out;
 }
