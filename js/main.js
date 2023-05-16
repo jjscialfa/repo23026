@@ -18,6 +18,6 @@ let cadFooter=`
             </a>
 
         </nav>
-        <p>Sitio desarrollado en Codo a Codo - Equipo 19</p>
+        <p>Desarrollado en Codo a Codo - C23026 - Equipo 19</p>
 `
 document.querySelector("footer").innerHTML=cadFooter

@@ -107,22 +107,18 @@ nav a {
 
 .left {
     grid-area: left;
-    padding: auto;
     margin: 10px;
-    /*max-width: 30%;*/
 }
 
 .contenido {
     grid-area: contenido;
-    padding: auto;
     margin: 10px;
-    /*max-width: 70%;*/
 }
 
 footer {
     background-image: url("/img/fondo-madera.jpg");
     color: #faf9f5d7;
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -288,7 +284,7 @@ footer {
     -webkit-animation: tracking-in-expand 1s cubic-bezier(.215, .61, .355, 1.000) both;
     animation: tracking-in-expand 1s cubic-bezier(.215, .61, .355, 1.000) both;
     font-size: xx-large;
-    font-style: bold;
+    font-weight: bold;
     color: #faf9f5d7;
 }
 
@@ -367,26 +363,43 @@ a:active {
 }
 
 .contenido {
-    padding: 1%;
+    padding-top: 30px;
     /* display: flex; */
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.item {
+    padding-top: 30px;
 }
 
 .video-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
     position: relative;
     width: 100%;
     height: auto;
-    padding-bottom: 56.25%;
+  
     /* Proporción 16:9  */
 }
-
 .video-container iframe {
-    position: absolute;
+   
+    
+    max-width: 100%;
+    height: 80%;
+}
+.map-container {
+    display: flex;
+  justify-content: center;
+    height: 400px; /* ajusta la altura según lo que necesites */
+    width: 100%; /* ajusta el ancho según lo que necesites */
+}
+
+.map-container iframe {
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
 }
 
 .img-responsive {
