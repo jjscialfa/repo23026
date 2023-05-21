@@ -8,34 +8,41 @@
     <link rel="icon" href="favicon/casita.ico" type="image/x-icon">
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css>
     <title>TusMuebles.com</title>
-    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+
     <header class="encabezado">
-        <table>
-            <tr>
-                <td><img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo"></td>
-                <td>
-                    <h1 class="titulo">TusMuebles.com</h1>
-                </td>
-            </tr>
-        </table>
+        <img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo">
+
+        <h1><a class="titulo">TusMuebles<span>.com</span></a></h1>
+
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav><a href="#" class="actual"></a></nav>
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="producto.html">Catálogo</a></li>
-                <li><a href="nosotros.html">Sobre nosotros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
+
+                <li><a href="#" class="actual">Inicio</a></li>
+                <li><a href="producto.html" class="boton-principal">Catálogo</a></li>
+                <li><a href="nosotros.html" class="boton-principal">Nosotros</a></li>
+                <li><a href="formulario.html" class="boton-invertido">Contacto</a></li>
+
+
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Comprar en TusMuebles.com online es rápido, fácil y seguro!</h2>
- 
+
         <div class="home">
+            <h2><a>Comprar en <span>TusMuebles</span>.com online es rápido, fácil y seguro!</a></h2>
+
             <div class="slider-frame">
                 <ul>
                     <li><img src="img/slider1.jpg" alt=""></li>
@@ -45,11 +52,23 @@
                 </ul>
             </div>
         </div>
+        <aside id="servicios">
+            <li>Muebles de interior</li>
+            <li>Muebles de comedor</li>
+            <li>Muebles de dormitorio</li>
+            <li>Muebles de cocina</li>
+            <li>Muebles de baño</li>
+            <li>Muebles de oficina</li>
+            <li>Muebles de jardín</li>
+            <li>Muebles de terraza</li>
+            <li>Muebles de exterior</li>
+
+        </aside>
     </section>
 
 
     <footer id="contacto">
-        
+
     </footer>
     <script src="js/main.js"></script>
 </body>

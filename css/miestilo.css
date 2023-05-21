@@ -1,13 +1,71 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     margin-right: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(rgba(215, 170, 91, 0.8), rgba(245, 250, 245, 0.8));
+}
+
+#servicios {
+    background-color: rgba(215, 170, 91, 0.8);
+}
+
+.boton-principal {
+    background: black;
+    color: rgba(215, 170, 91, 0.8);
+    border: 1px solid black;
+    border-radius: 5em;
+    font-weight: bold;
+    font-size: 1em;
+    padding: .5em 1.1em;
+    display: inline-block;
+    background-image: url("/img/color_madera_oscuro.jpg");
+}
+
+.boton-invertido {
+    background: rgba(215, 170, 91, 0.8);
+    color: black;
+    border: 1px solid rgba(215, 170, 91, 0.8);
+    border-radius: 5em;
+    font-weight: bold;
+    font-size: 1em;
+    padding: .5em 1.1em;
+    display: inline-block;
+    background-image: url("/img/color_madera_claro.jpg");
+}
+
+.boton-invertido:hover {
+    background: black;
+    color: white;
+}
+
+header ul,
+#servicios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul {
+    display: flex;
+    place-content: space-between;
+}
+
+header div.encabezado {
+    display: flex;
+    place-content: space-between;
+}
+
+header,
+main,
+aside {
+    padding: 1em;
 }
 
 home img {
@@ -16,12 +74,41 @@ home img {
 
 /* Estilos del encabezado */
 .encabezado {
+    /* place-content: flex-start; */
     background-image: url("/img/fondo-madera.jpg");
-    background-size: cover;
+    display: flex;
+    align-items: center;
     /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    
+    /* background-position: center; */
     /* Centra la imagen dentro del contenedor */
     /* Otros estilos para el encabezado */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.menu ul {
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+  margin-top: 5%; 
+  margin-right: 15%;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.logo {
+    margin-right: 10px;
 }
 
 table {
@@ -30,7 +117,7 @@ table {
     /* border: 1px solid; */
 }
 
-nav {
+/* nav {
     width: 100%;
 }
 
@@ -39,7 +126,7 @@ nav ul {
     padding: 0;
     list-style: none;
     font-size: large;
-    /*flexbox para alinear items de nav*/
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -51,13 +138,13 @@ nav ul {
 
 nav li {
     display: inline-block;
-    /*margin-right: 20px;*/
+
 }
 
 nav a {
-    color: #faf9f5d7;
+     color: #faf9f5d7;
     text-decoration: none;
-}
+} */
 
 /* Estilos del banner */
 #banner {
@@ -165,89 +252,7 @@ footer {
     }
 }
 
-/* BREACK POINTS */
-/* Extra small devices (600px and down) */
-@media only screen and (max-width: 412px) and (max-height: 914px) {
-    .example {
-        /*background: red;*/
-        max-width: 100%;
-    }
-}
 
-/* Small devices (600px and up) */
-@media only screen and (min-width: 600px) {
-    .example {
-        background: green;
-    }
-}
-
-/* Medium devices (768px and up) */
-@media only screen and (min-width: 768px) {
-    .example {
-        background: blue;
-    }
-}
-
-/* Large devices (992px and up) */
-@media only screen and (min-width: 992px) {
-    .example {
-        background: orange;
-    }
-}
-
-/* Extra large devices (1200px and up) */
-@media only screen and (min-width: 1280px) {
-    .example {
-        background: pink;
-    }
-}
-
-.productos {
-    width: 100%;
-    height: 100vh;
-     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.navbar {
-    width: 100%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-
-}
-
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: rgb(15, 14, 14);
-    font-size: 1.2rem;
-}
-
-.navbar ul li::before {
-    content: "";
-    height: 3px;
-    width: 0%;
-    background: rgb(185, 156, 107);
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-    transition: 0.4s ease-out;
-}
-
-.navbar ul li:hover::before {
-    width: 100%;
-}
 
 /* animaciones*/
 @-webkit-keyframes tracking-in-expand {
@@ -349,16 +354,19 @@ a:link {
     color: rgb(185, 156, 107);
 }
 
-a:hover {
+/* a:hover {
     background-color: rgb(26, 18, 6);
-}
+    color:  rgb(185, 156, 107);
+} */
 
 a:visited {
-    color: rgb(135, 113, 71);
+    color:
+        /* rgb(135, 71, 73) */
+    ;
 }
 
 a:active {
-    background-color: rgb(128, 117, 0);
+    background-color: rgb(185, 156, 107);
     color: white;
 }
 
@@ -369,6 +377,7 @@ a:active {
     justify-content: center;
     text-align: center;
 }
+
 .item {
     padding-top: 30px;
 }
@@ -380,20 +389,24 @@ a:active {
     position: relative;
     width: 100%;
     height: auto;
-  
+
     /* Proporción 16:9  */
 }
+
 .video-container iframe {
-   
-    
+
+
     max-width: 100%;
     height: 80%;
 }
+
 .map-container {
     display: flex;
-  justify-content: center;
-    height: 400px; /* ajusta la altura según lo que necesites */
-    width: 100%; /* ajusta el ancho según lo que necesites */
+    justify-content: center;
+    height: 400px;
+    /* ajusta la altura según lo que necesites */
+    width: 100%;
+    /* ajusta el ancho según lo que necesites */
 }
 
 .map-container iframe {
@@ -407,10 +420,10 @@ a:active {
     height: auto;
 }
 
+
+
 /************************/
-.menu {
-    max-width: 100%;
-}
+/*
 
 .menu a:hover {
     background-color: rgba(249, 249, 249, 0.2);
@@ -421,6 +434,176 @@ a:active {
 .menu a {
     text-decoration: none;
     color: rgb(232, 228, 221);
-    /*font-family: 'Montserrat', sans-serif;*/
     transition: background-color 0.2s ease-out;
+} */
+
+/************************/
+/* Configuración leyenda "TusMuebles" de un color y ".com" de otro */
+header>h1>a>span {
+    color: black;
 }
+
+header>h1>a {
+    word-spacing: -0.2em;
+}
+
+header div.encabezado {
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+
+.home>h2>a>span {
+    color: white;
+}
+
+/************************/
+
+div.encabezado {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+header a {
+    padding: 1em;
+}
+
+main div.encabezado {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a.actual {
+    font-weight: bold;
+}
+
+#menu,
+#menu-check {
+    display: none;
+}
+
+/* BREACK POINTS */
+
+@media only screen and (max-width: 900px) {
+
+    header div.encabezado,
+    header div.encabezado ul,
+    header div.encabezado ul li {
+        display: inline;
+    }
+
+    header div.encabezado nav {
+        width: 100%;
+        display: inline;
+    }
+}
+
+/* Medium devices (700px and up) */
+@media only screen and (min-width: 700px) {
+    header div.encabezado {
+        display: flex;
+        place-content: space-between;
+    }
+
+    #menu-check:not(:checked)~nav {
+        display: none;
+    }
+
+    #menu-check: :checked~nav {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        color: black;
+        background-color: rgb(185, 156, 107);
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid black;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hover {
+        color: rgb(185, 156, 107);
+        background-color: black;
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-cerrar {
+        display: block;
+    }
+
+    header div.encabezado nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgb(185, 156, 107);
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.8;
+        color: rgb(185, 156, 107);
+        font-size: 1.4em;
+    }
+
+    header div.encabezado nav ul a {
+        color: rgb(185, 156, 107);
+        ;
+        background: none;
+    }
+
+    header div.encabezado nav ul,
+    header div.encabezado nav ul li {
+        display: block;
+        text-align: right;
+    }
+
+    header div.encabezado nav .boton-principal {
+        border: 1;
+        border-radius: 1;
+    }
+
+    header div.encabezado nav .boton-invertido {
+        border: 1;
+        border-radius: 1;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {
+        /* background: blue; */
+    }
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {
+        /* background: orange; */
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1280px) {
+    .example {
+       /*  background: pink; */
+    }
+}
+
+/*************************/

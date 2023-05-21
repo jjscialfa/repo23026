@@ -15,20 +15,25 @@
 
 <body>
     <header class="encabezado">
-        <table>
-            <tr>
-                <td><img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo"></td>
-                <td>
-                    <h1 class="titulo">TusMuebles.com</h1>
-                </td>
-            </tr>
-        </table>
+        <img src="img/TusMuebles-logo.png" class="logo" alt="Main Logo">
+
+        <h1><a class="titulo">TusMuebles<span>.com</span></a></h1>
+
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav><a href="#" class="actual"></a></nav>
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="producto.html">Catálogo</a></li>
-                <li><a href="nosotros.html">Sobre nosotros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
+
+                <li><a href="index.html" class="boton-principal">Inicio</a></li>
+                <li><a href="producto.html" class="boton-principal">Catálogo</a></li>
+                <li><a href="nosotros.html" class="boton-principal">Nosotros</a></li>
+                <li><a href="#" class="actual">Contacto</a></li>
+
+
             </ul>
         </nav>
     </header>
