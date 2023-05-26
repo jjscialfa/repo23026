@@ -81,7 +81,7 @@ home img {
     /* Ajusta el tamaño de la imagen para cubrir el contenedor */
     background-size: cover;
     justify-content: space-between;
-    
+
     /* background-position: center; */
     /* Centra la imagen dentro del contenedor */
     /* Otros estilos para el encabezado */
@@ -92,20 +92,20 @@ home img {
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .menu ul {
-  max-width: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu li {
-  margin-top: 5%; 
-  margin-right: 15%;
-  justify-content: space-between;
-  align-items: center;
-} 
+    margin-top: 5%;
+    margin-right: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .logo {
     margin-right: 10px;
@@ -235,7 +235,13 @@ footer {
 }
 
 .container-fluid {
+    margin:0;
+    padding: 0;
     background-image: linear-gradient(rgba(215, 170, 91, 0.8), rgba(245, 250, 245, 0.8));
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
 }
 
 .destacados {
@@ -388,16 +394,20 @@ a:active {
     text-align: center;
     position: relative;
     width: 100%;
-    height: auto;
-
-    /* Proporción 16:9  */
+    height: 0;
+    padding-bottom: 56.25%;
+    /* Proporción 16:9 */
+    justify-content: center;
 }
 
 .video-container iframe {
-
-
-    max-width: 100%;
+    position: absolute;
+    justify-content: center;
+    top: 10%;
+    left: 1%;
+    width: 80%;
     height: 80%;
+    margin-left: 10%;
 }
 
 .map-container {
@@ -503,6 +513,12 @@ a.actual {
     }
 }
 
+#menu-abrir,
+#menu-cerrar {
+    font-size: 24px;
+    /* Tamaño de la letra en píxeles */
+}
+
 /* Medium devices (700px and up) */
 @media only screen and (min-width: 700px) {
     header div.encabezado {
@@ -602,8 +618,35 @@ a.actual {
 /* Extra large devices (1200px and up) */
 @media only screen and (min-width: 1280px) {
     .example {
-       /*  background: pink; */
+        /*  background: pink; */
     }
 }
 
 /*************************/
+.form-control {
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    /* Ajusta el ancho del input según tu preferencia */
+    height: 30px;
+    /* Ajusta la altura del input según tu preferencia */
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente según tu preferencia */
+    /* Agrega otros estilos personalizados según sea necesario */
+    margin-left: 1%;
+}
+
+.form-label {
+    margin-left: 1%;
+}
+
+.form-control-md {
+    width: 600px;
+    /* Ajusta el ancho del input según tu preferencia */
+    height: 90px;
+    /* Ajusta la altura del input según tu preferencia */
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente según tu preferencia */
+    /* Agrega otros estilos personalizados según sea necesario */
+
+}
