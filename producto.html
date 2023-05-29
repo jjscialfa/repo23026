@@ -19,30 +19,68 @@
 
         <h1><a class="titulo">TusMuebles<span>.com</span></a></h1>
 
-        <input type="checkbox" id="menu-check">
-        <label id="menu" for="menu-check">
-            <span id="menu-abrir">&#9776;</span>
-            <span id="menu-cerrar">X</span>
-        </label>
-        <nav><a href="#" class="actual"></a></nav>
-        <nav class="menu">
+        <nav id="main-menu">
             <ul>
-
-                <li><a href="index.html" class="boton-principal">Inicio</a></li>
-                <li><a href="#" class="actual">Catálogo</a></li>
-                <li><a href="nosotros.html" class="boton-principal">Nosotros</a></li>
+              <li><a href="index.html" class="boton-principal">Inicio</a></li>
+              <li><a href="producto.html" class="boton-principal">Catálogo</a></li>
+              <li><a href="nosotros.html" class="boton-principal" >Nosotros</a></li>
+              <li><a href="formulario.html" class="boton-invertido">Contacto</a></li>
+            </ul>
+          </nav>
+    
+        <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <label id="hamburger-menu" for="hamburger-input">
+            
+        <nav id="sidebar-menu">
+            <h3>Menu</h3>
+            <ul id="listamenu">
+                <li><a href="index.html" class="boton-principal">Inicio</a></li><br>
+                <li><a href="producto.html" class="boton-principal">Catálogo</a></li><br>
+                <li><a href="nosotros.html" class="boton-principal">Nosotros</a></li><br>
                 <li><a href="formulario.html" class="boton-invertido">Contacto</a></li>
-
-
             </ul>
         </nav>
+        </label>
+
+
+        <div class="overlay"></div>
     </header>
 
     <section>
         <h2>Destacados</h2>
         <div class="home">
+            <div class="grid-item">
+                <img src="img/mesa.jpg" alt="Mesa" class="img-responsive">
+                
+                <h3 id="tituloProducto">Mesa de comedor:</h3>
+                <p>Encontrá la mesa que transforme, tu comedor, en tu espacio ideal, la mesa ideal
+                    que
+                    complete tu espacio único en <b>TusMuebles.com</b>. Elegancia y sofisticación.
+                    Mobiliario de
+                    diseñador. 50 años de experiencia. Tipos: Sillas, Sofás, Mesas, Puffs, Butacas.
+                </p>
+                <a href="formulario.html" class="btn">Consultar</a>
 
-            <table>
+                
+            </div>
+
+            <div class="grid-item">
+               <img src="img/sofa.jpg" alt="Sofá" class="img-responsive">
+            
+               <h3 id="tituloProducto">Sofá de piel:</h3>
+               <p>Encontrá el sofá que mejor se ajusta a tu hogar en <b>TusMuebles.com</b>. Mirá
+                   nuestro
+                   catálogo. Sillones
+                   Retro, Modernos, Rinconeros, Puffs y más. Tipo: 2
+                   Cuerpos. Vintage.
+               </p>
+               <a href="formulario.html" class="btn">Consultar</a>
+
+                
+            </div>
+          
+        
+            <!-- <table>
                 <tr>
                     <td><img src="img/mesa.jpg" alt="Mesa" class="img-responsive"></td>
                     <td>
@@ -53,7 +91,7 @@
                             Mobiliario de
                             diseñador. 50 años de experiencia. Tipos: Sillas, Sofás, Mesas, Puffs, Butacas.
                         </p>
-                        <a href="#" class="btn">Comprar</a>
+                        <a href="formulario.html" class="btn">Consultar</a>
                     </td>
                 </tr>
 
@@ -67,9 +105,11 @@
                             Retro, Modernos, Rinconeros, Puffs y más. Tipo: 2
                             Cuerpos. Vintage.
                         </p>
-                        <a href="#" class="btn">Comprar</a>
+                        <a href="formulario.html" class="btn">Consultar</a>
                     </td>
-                </tr>
+                </tr> -->
+
+
             </table>
 
 

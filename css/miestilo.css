@@ -68,7 +68,33 @@ aside {
     padding: 1em;
 }
 
-home img {
+.home{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 30px;
+    padding: 0px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.grid-item{
+    display: grid;
+    grid-template-columns: 30% 15% 35%;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+#tituloProducto{
+    margin-left: 20px;
+}
+
+homeNosotros img {
     width: 50%;
 }
 
@@ -177,6 +203,21 @@ nav a {
 }
 
 /*formulario*/
+/* .centerButton {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  } */
+
+  textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
 .tituloFormulario {
     text-align: center;
 }
@@ -297,6 +338,7 @@ footer {
     font-size: xx-large;
     font-weight: bold;
     color: #faf9f5d7;
+    
 }
 
 @-webkit-keyframes rotate-in-center {
@@ -366,9 +408,9 @@ a:link {
 } */
 
 a:visited {
-    color:
+    /* color:
         /* rgb(135, 71, 73) */
-    ;
+     
 }
 
 a:active {
@@ -425,10 +467,6 @@ a:active {
     height: 80%;
 }
 
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-}
 
 
 
@@ -521,18 +559,18 @@ a.actual {
 
 /* Medium devices (700px and up) */
 @media only screen and (min-width: 700px) {
-    header div.encabezado {
-        display: flex;
-        place-content: space-between;
+    .encabezado {
+       display: flex;
+       flex-wrap: wrap;
     }
 
-    #menu-check:not(:checked)~nav {
-        display: none;
+    /* #menu-check:not(:checked)~nav {
+        display: flex;
     }
 
     #menu-check: :checked~nav {
-        display: block;
-    }
+        display: flex;
+    } */
 
     #menu {
         display: block;
@@ -554,17 +592,17 @@ a.actual {
     }
 
     #menu-cerrar {
-        display: none;
+        display: nonflexe;
     }
 
     #menu-check:checked~label #menu-abrir {
-        display: none;
+        display: flex;
     }
 
     #menu-check:checked~label #menu-cerrar {
-        display: block;
+        display: flex;
     }
-
+/*
     header div.encabezado nav {
         position: absolute;
         top: 0;
@@ -598,7 +636,7 @@ a.actual {
     header div.encabezado nav .boton-invertido {
         border: 1;
         border-radius: 1;
-    }
+    } */
 }
 
 /* Medium devices (768px and up) */
@@ -650,3 +688,150 @@ a.actual {
     /* Agrega otros estilos personalizados según sea necesario */
 
 }
+
+
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+
+
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: static;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: left;
+    font-family: 'Cabin', Sans-serif;
+    background-image: linear-gradient(black 0%,black 20%, transparent 20%,transparent 30%, black 30%, black 50%,transparent 50%, transparent 60%, black 60%, black 80%, transparent 80%);
+}
+
+#listamenu {
+    display: flex;
+    flex-direction: column;
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: -50px;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(215, 170, 91, 0.8);
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: black;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+
+
+#hamburger-menu {
+    display: none;
+  }  
+
+@media screen and (max-width: 1050px) {
+  #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+
+  }
+
+  .grid-item{
+    display:flex;
+    flex-direction: column;
+    
+  }
+
+  #tituloProducto{
+    margin-left: 0px;
+}
+
+.img-responsive {
+    max-width: 90%;
+    height: auto;
+    align-self: center;
+    
+}
+
+} 
+
+
+@media screen and (max-width: 635px) {
+    .logo{
+        height: 20%;
+        width: 20%;
+        margin-top: 5px;
+    }
+    .titulo{
+        font-size:medium;
+    }
+    .form-control{
+        width: 100%;
+        
+    }
+
+    #contacto{
+        margin-top: 70px;
+    }
+    
+    #main-menu {
+      display: none;
+    }
+    #hamburger-menu {
+      display: inline;
+  
+    }
+
+    
+  } 
