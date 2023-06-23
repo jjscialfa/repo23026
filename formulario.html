@@ -52,15 +52,15 @@
                 <h2>Formulario de contacto</h2>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control " id="name" required>
+                    <input type="text" class="form-control " id="name" >
                 </div>
                 <div class="mb-3">
                     <label for="surname" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="surname" required>
+                    <input type="text" class="form-control" id="surname" >
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" required
+                    <input type="email" class="form-control" id="email" 
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     <div class="invalid-feedback">
                         Por favor ingrese un correo electrónico válido.
@@ -98,33 +98,85 @@
 
 
     <script>
-        const btn = document.getElementById('button');
+        // Obtener referencias a los elementos del formulario
+        const form = document.getElementById('form');
+        const nameInput = document.getElementById('name');
+        const surnameInput = document.getElementById('surname');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
 
-        document.getElementById('form')
-            .addEventListener('submit', function (event) {
-                event.preventDefault();
+        // Agregar un evento de escucha al enviar el formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envÃ­o del formulario
 
-                btn.value = 'Enviando...';
+            // Validar los campos manualmente
+            if (nameInput.value.trim() === '') {
+                alert('Por favor, ingrese su nombre.');
+                nameInput.focus();
+                return;
+            }
 
+            if (surnameInput.value.trim() === '') {
+                alert('Por favor, ingrese su apellido.');
+                surnameInput.focus();
+                return;
+            }
 
-                const serviceID = 'default_service';
-                const templateID = 'template_ewwy09t';
+            if (emailInput.value.trim() === '') {
+                alert('Por favor, ingrese su correo electrónico.');
+                emailInput.focus();
+                return;
+            }
 
+            if (!isValidEmail(emailInput.value)) {
+                alert('Por favor, ingrese un correo electrónico válido.');
+                emailInput.focus();
+                return;
+            }
 
+            if (messageInput.value.trim() === '') {
+                alert('Por favor, ingrese una descripción.');
+                messageInput.focus();
+                return;
+            }
 
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(() => {
-                        btn.value = 'Enviado';
-                        alert('El mensaje se envio correctamente! gracias por comunicarse con nosotros');
-                    }, (err) => {
-                        btn.value = 'Enviar';
-                        alert(JSON.stringify(err));
-                    });
+            // Si todos los campos son vÃ¡lidos, procede a enviar el formulario
+            const btn = document.getElementById('button');
 
+            document.getElementById('form')
+                .addEventListener('submit', function (event) {
+                    event.preventDefault();
+    
+                    btn.value = 'Enviando...';
+    
+    
+                    const serviceID = 'default_service';
+                    const templateID = 'template_ewwy09t';
+    
+    
+    
+                    emailjs.sendForm(serviceID, templateID, this)
+                        .then(() => {
+                            btn.value = 'Enviado';
+                            alert('El mensaje se envio correctamente! gracias por comunicarse con nosotros');
+                        }, (err) => {
+                            btn.value = 'Enviar';
+                            alert(JSON.stringify(err));
+                        });
+    
+    
+    
+                });
 
+        });
 
-            });
+        // FunciÃ³n para validar el formato del correo electrÃ³nico
+        function isValidEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
     </script>
+
 
 </body>
 
